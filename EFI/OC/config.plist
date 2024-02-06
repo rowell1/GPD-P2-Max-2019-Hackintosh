@@ -475,7 +475,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.8 | Audio Controller</string>
+                    <string>V1.8.9 | Audio Controller</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -493,7 +493,7 @@
                     <key>BundlePath</key>
                     <string>IntelBTPatcher.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0 | for macOS 12 Monterey and newer only</string>
+                    <string>V2.4.0 | for macOS 12 Monterey and newer only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -511,7 +511,7 @@
                     <key>BundlePath</key>
                     <string>IntelBluetoothFirmware.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0 | Intel Bluetooth firmware uploader</string>
+                    <string>V2.4.0 | Intel Bluetooth firmware uploader</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -529,7 +529,7 @@
                     <key>BundlePath</key>
                     <string>IntelBluetoothInjector.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0 | for macOS 11 BigSur and earlier only</string>
+                    <string>V2.4.0 | for macOS 11 BigSur only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -689,13 +689,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>NightShiftUnlocker.kext</string>
+                    <string>FeatureUnlock.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.1 | A Lilu plugin that unlocks the Night Shift function for all Macs.</string>
+                    <string>V1.1.5 | A Lilu plugin that unlocks the NightShift function for all Macs.</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NightShiftUnlocker</string>
+                    <string>Contents/MacOS/FeatureUnlock</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -727,7 +727,7 @@
                     <key>BundlePath</key>
                     <string>VoodooI2CGoodix.kext</string>
                     <key>Comment</key>
-                    <string>V0.3.1</string>
+                    <string>V0.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1083,7 +1083,7 @@
                     <key>FullNvramAccess</key>
                     <true/>
                     <key>Name</key>
-                    <string>Open Shell</string>
+                    <string>UEFI Shell</string>
                     <key>Path</key>
                     <string>OpenShell.efi</string>
                     <key>RealPath</key>
@@ -1306,6 +1306,18 @@
                     <false/>
                     <key>Path</key>
                     <string>HfsPlus.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>LoadEarly</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>OpenLinuxBoot.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
