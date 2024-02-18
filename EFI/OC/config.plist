@@ -392,11 +392,11 @@
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,ig-platform-id</key>
-                    <data>CQClPg==</data>
+                    <data>AADAhw==</data>
                     <key>AAPL00,override-no-connect</key>
-                    <data>e2xlbmd0aCA9IDEyOCwgYnl0ZXMgPSAweDAwZmZmZmZmIGZmZmZmZjAwIDA2MTAyYWEwIDAwMDAwMDAwIC4uLiAwMDAwMDAwMCAwMDAwMDBkYyB9</data>
+                    <data>AP///////wAoiQIHAAAAAB8cAQSlEwz/LwAAoFdJmyYQSE8AAAABAQEBAQEBAQEBAQEBAQEBA2oA6KBAFGB4INMAwHgAAAAYAAAA/ABKRElfOC45X0xDRAogAAAA/QA8PLKyHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANw=</data>
                     <key>device-id</key>
-                    <data>PqUACQ==</data>
+                    <data>wIcAAA==</data>
                     <key>framebuffer-con0-index</key>
                     <data>AQAAAA==</data>
                     <key>framebuffer-con1-enable</key>
@@ -407,12 +407,18 @@
                     <data>AQAAAA==</data>
                     <key>framebuffer-con2-type</key>
                     <data>AAgAAA==</data>
+                    <key>framebuffer-fbmem</key>
+                    <data>AACQAA==</data>
                     <key>framebuffer-patch-enable</key>
                     <data>AQAAAA==</data>
+                    <key>framebuffer-stolenmem</key>
+                    <data>AAAwAQ==</data>
+                    <key>framebuffer-unifiedmem</key>
+                    <data>AAAAgA==</data>
                     <key>hda-gfx</key>
                     <string>onboard-1</string>
                     <key>model</key>
-                    <string>Intel UHD Graphics 615</string>
+                    <string>Intel UHD Graphics 617</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -757,7 +763,7 @@
                     <key>BundlePath</key>
                     <string>SystemProfilerMemoryFixup.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.0 | Lilu plugin for showing the memory tab on MacBookAir and MacBookPro10,x platforms. </string>
+                    <string>V1.0.0 | Lilu plugin for showing the memory tab on MacBookAir and MacBookPro10,x platforms.</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -1267,7 +1273,7 @@
                 <key>MinimumAudibleGain</key>
                 <integer>-55</integer>
                 <key>PlayChime</key>
-                <string>false</string>
+                <string>Auto</string>
                 <key>ResetTrafficClass</key>
                 <false/>
                 <key>SetupDelay</key>
