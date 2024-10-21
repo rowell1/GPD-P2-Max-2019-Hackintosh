@@ -533,7 +533,7 @@
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string></string>
+                    <string>Contents/MacOS/IntelBluetoothInjector</string>
                     <key>MaxKernel</key>
                     <string>20.9.9</string>
                     <key>MinKernel</key>
@@ -556,6 +556,42 @@
                     <string></string>
                     <key>MinKernel</key>
                     <string> 21.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>BrcmFirmwareData.kext</string>
+                    <key>Comment</key>
+                    <string>V2.6.9 | for macOS 15 temporarely (ASUS USB-BT400)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BrcmFirmwareData</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>BrcmPatchRAM3.kext</string>
+                    <key>Comment</key>
+                    <string>V2.6.9 | for macOS 15 temporarely (ASUS USB-BT400)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BrcmPatchRAM3</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>21.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -797,9 +833,27 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
+                    <string>AirportItlwm-Catalina.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 10.15 Catalina only</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>19.9.9</string>
+                    <key>MinKernel</key>
+                    <string>19.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
                     <string>AirportItlwm-BigSur.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 11 BigSur only</string>
+                    <string>V2.3.0 | for macOS 11 BigSur only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -817,7 +871,7 @@
                     <key>BundlePath</key>
                     <string>AirportItlwm-Monterey.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 12 Monterey only</string>
+                    <string>V2.3.0 | for macOS 12 Monterey only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -835,7 +889,7 @@
                     <key>BundlePath</key>
                     <string>AirportItlwm-Ventura.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 13 Ventura only</string>
+                    <string>V2.3.0 | for macOS 13 Ventura only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -877,9 +931,45 @@
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AirportItlwm</string>
                     <key>MaxKernel</key>
-                    <string></string>
+                    <string>23.9.9</string>
                     <key>MinKernel</key>
                     <string>23.4.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>RtWlanU.kext</string>
+                    <key>Comment</key>
+                    <string>V1830.32.b27 | for macOS 15 temporarely (TP-link T2U nano)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RtWlanU</string>
+                    <key>MaxKernel</key>
+                    <string>24.9.9</string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>RtWlanU1827.kext</string>
+                    <key>Comment</key>
+                    <string>V1827.4.b36 | for macOS 15 temporarely (TP-link T2U nano)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RtWlanU1827</string>
+                    <key>MaxKernel</key>
+                    <string>24.9.9</string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -1131,10 +1221,14 @@
                 <dict>
                     <key>SystemAudioVolume</key>
                     <data>gA==</data>
+                    <key>bluetoothExternalDongleFailed</key>
+                    <data>AA==</data>
+                    <key>bluetoothInternalControllerInfo</key>
+                    <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
                     <string></string>
                     <key>csr-active-config</key>
-                    <data>AAAAAA==</data>
+                    <data>ZwAAAA==</data>
                     <key>prev-lang:kbd</key>
                     <data></data>
                 </dict>
