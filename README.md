@@ -1,71 +1,182 @@
-# GPD P2 Max 2019 Hackintosh
+[![EFI release](https://img.shields.io/badge/EFI-Aug_31,_2026-silver.svg)](https://github.com/rowell1/GPD-P2-Max-2019-Hackintosh/tree/OpenCore)
+[![OpenCore version](https://img.shields.io/badge/OC-1.0.7-silver.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS version](https://img.shields.io/badge/†BigSur-11.7.11-deeppink.svg)](https://www.apple.com/macos)
+[![macOS version](https://img.shields.io/badge/†Monterey-12.7.6-violet.svg)](https://www.apple.com/macos)
+[![macOS version](https://img.shields.io/badge/†Ventura-13.7.8-orange.svg)](https://www.apple.com/macos)
+[![macOS version](https://img.shields.io/badge/†Sonoma-14.8.9-limegreen.svg)](https://www.apple.com/macos)
+[![macOS version](https://img.shields.io/badge/Sequoia-15.7.9-mediumblue.svg)](https://www.apple.com/macos)
+[![macOS version](https://img.shields.io/badge/Tahoe-26.6.2-cornflowerblue.svg)](https://www.apple.com/macos)
 
-Hackintosh EFI folder for **GPD P2 Max 2019** (m3-8100Y BIOS 0.29) now supports up to **macOS 14 Sonoma**: 
-<img width="250" alt="macOS" src="images/macOS.png">  
-With OCAuxiliaryTools I updated https://github.com/Azkali/GPD-P2-MAX-Hackintosh/tree/OpenCore (Jan 13,2021) to the latest **OpenCore 0.9.7**.  Added some Kexts and selected SMBIOS **MacBookAir8,2** (maximum macOS = Current).   
 
-<img width="1280" alt="Sonoma" src="images/Sonoma.png">
+# GPD P2 Max 2019 Hackintosh  _[UNDER MAINTENANCE]_
 
-## Basic Usage
-1. Create a macOS Sonoma bootable USB using this [tutorial](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) but use the provided EFI folder instead of configuring it on your own
-2. Boot from the freshly created USB then install macOS Sonoma on a free partition of your drive
-3. During first boot, after installing the OS, mount your EFI partition and place the EFI folder content alongside other OSes bootloader
-4. Reboot and change BIOS bootloader order to have OpenCore bootloader as first entry
-5. Generate a new SMBIOS using CorpNewt's [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
-6. Reboot and enjoy !
+This EFI folder for **8.9" GPD P2 Max 2019** (m3-8100Y, BIOS V0.29) supports up to **macOS 26.6.2 Tahoe**  
 
-## What’s included
-........................................................... release .... comment .................................................... MinKernel .. MaxKernel  
-• Lilu.kext ............................................ 1.6.7  
-• VirtualSMC.kext ................................ 1.3.2  
-• AppleALC.kext .................................. 1.8.8  
-• IntelBTPatcher.kext (1) ..................... 2.3.0 _...... for macOS 12 Monterey and newer only ...... 21.0.0_  
-• IntelBluetoothFirmware.kext (1) ....... 2.3.0  
-• IntelBluetoothInjector.kext (1) .......... 2.3.0 _...... for macOS 11 BigSur and earlier only ........................... 20.99.99_  
-• BlueToolFixup.kext (1) ...................... 2.6.8 _...... for macOS 12 Monterey and newer only ...... 21.0.0_  
-• SMCProcessor.kext .......................... 1.3.2  
-• SMCBatteryManager.kext ................ 1.3.2  
-• WhateverGreen.kext ........................ 1.6.6  
-• CPUFriend.kext ................................ 1.2.7  
-• NVMeFix.kext ................................... 1.1.1  
-• USBPorts.kext .................................. 1.0  
-• NullEthernet.kext ............................. 1.0.6  
-• NightShiftUnlocker.kext ................... 2.2.1  
-• BrightnessKeys.kext (3) ................... 1.0.3  
-• VoodooI2CGoodix.kext .................... 0.3.1  
-• VoodooI2C.kext ................................ 2.8  
-• SystemProfilerMemoryFixup.kext .... 1.0.0  
-• RTCMemoryFixup.kext ..................... 1.0.7  
-• AirportItlwm-BigSur.kext (2) ............ 2.2.0 _...... for macOS 11 BigSur only ............................. 20.0.0 .... 20.99.99_  
-• AirportItlwm-Monterey.kext (2) ....... 2.2.0 _...... for macOS 12 Monterey only ........................ 21.0.0 .... 21.99.99_  
-• AirportItlwm-Ventura.kext (2) .......... 2.2.0 _...... for macOS 13 Ventura only .......................... 22.0.0 .... 22.99.99_  
-• AirportItlwm-Sonoma.kext (2) ......... 2.3.0 _...... for macOS 14 Sonoma only .......................... 23.0.0 .... 23.99.99_  
+With **OCAuxiliaryTools** I updated [_Azkali/GPD-P2-MAX-Hackintosh (Jan 13, 2021)_](https://github.com/Azkali/GPD-P2-MAX-Hackintosh/tree/OpenCore) to **OpenCore 1.0.7**  
+Added some Kexts and selected SMBIOS **MacBookPro16,2** (maximum macOS = Tahoe)  
 
-## What works
+
+_**LATEST NEWS**  
+• Jessie's Flying Benchmark videos: [Did macOS Tahoe kill official OCLP 3.0 support? Most likely...](https://www.youtube.com/watch?v=MBnKT_ga3Ss&list=PLHL6IcL-qTheCdZSWluPmSfSg6FbqVnGj&index=1)  
+• From Aqua and Aero to Liquid Glass: [why Apple is returning to the "glass" interface](https://mezha.media/en/articles/vid-aqua-ta-aero-do-liquid-glass-chomu-apple-povertayetsya-do-sklyanogo-interfeysu-302604/)_  
+
+
+<img src="images/Tahoe.png" width="395"/> <img src="images/Sequoia.png" width="395"/>  
+<img src="images/Sonoma.png" width="395"/> <img src="images/Ventura.png" width="395"/>  
+<img src="images/Monterey.png" width="395"/> <img src="images/BigSur.png" width="395"/>  
+<img src="images/Windows11.png" width="395"/>  <img src="images/BootPicker.png" width="395"/>  
+
+
+## Hardware specs  
+• CPU: Intel Core m3-8100Y (8th-gen Amber Lake-Y)  
+• GPU: Intel UHD Graphics 615  
+• RAM: 16GB LPDDR3 1866MHz  
+• SSD: 512GB PCIe NVMe M.2 2280 (BiWIN NS200)  
+• Laptop Make and Model: GPD P2 Max 2019  
+• Audio Codec: Realtek ALC269  
+• Ethernet USB-C Adapter:  Realtek RTL8156B  
+• Wifi/BT Card:  Intel AC 7265D2W  
+• Touchpad:  I²C HID Device  
+• BIOS Revision: AMI 5.12, GPD P2 Max 0.29  
+
+## Basic Usage  
+1. Create a macOS Tahoe bootable USB using this [_tutorial_](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) but use the provided EFI folder instead of configuring it on your own  
+2. Boot from the freshly created USB then install macOS Tahoe on a free partition of your drive  
+3. During first boot, after installing the OS, mount your EFI partition and place the EFI folder content alongside other OSes bootloader  
+4. Reboot and change BIOS bootloader order to have OpenCore bootloader as first entry  
+5. Generate a new SMBIOS using CorpNewt's [_GenSMBIOS_](https://github.com/corpnewt/GenSMBIOS)  
+6. Reboot and enjoy !  
+
+## What’s included  
+........................................................... release ............ comment ....................... MinKernel .... MaxKernel  
+• Lilu.kext ........................................... 1.7.2  
+• VirtualSMC.kext .............................. 1.3.7  
+• SMCBatteryManager.kext ............... 1.3.7  
+• SMCProcessor.kext ......................... 1.3.7  
+• SMCSuperIO.kext ............................ 1.3.7  
+• WhateverGreen.kext ....................... 1.7.0  
+• AppleALC.kext ................................ 1.9.7  
+• RestrictEvents.kext ......................... 1.1.6  
+• BrightnessKeys.kext ....................... 1.0.3  
+• ECEnabler.kext ................................ 1.0.6  
+• FeatureUnlock.kext<sup>_3_</sup> ....................... 1.1.8  
+• HibernationFixup.kext ..................... 1.5.4  
+• IntelBluetoothFirmware.kext<sup>_1_</sup> .......... 2.4.0  
+• IntelBluetoothInjector.kext<sup>_1_</sup> ............. 2.4.0 _............... for macOS 11 or earlier ....................... 20.9.9_  
+• IntelBTPatcher.kext<sup>_1_</sup> ........................ 2.4.0  
+• BlueToolFixup.kext<sup>_1_</sup> ......................... 2.7.2 _................ for macOS 12 or later .......... 21.0.0_  
+• NVMeFix.kext .................................. 1.1.3  
+• USBPorts.kext ................................. 1.0  
+• VoodooI2C.kext ............................... 2.9.1  
+• VoodooI2CGoodix.kext ................... 0.4.0  
+• VoodooI2CHID.kext ......................... 1  
+• ~VoodooPS2Controller.kext .............. 2.3.7~  
+• ~itlwm.kext<sup>_5_</sup> ...................................... 2.3.0<sub>_stable_</sub> _........ for macOS 26 or later .......... 25.0.0_~  
+• IOSkywalkFamily.kext<sup>_5_</sup> .................... 1.0 _................... for macOS 15 or later .......... 24.0.0_  
+• IO80211FamilyLegacy.kext<sup>_5_</sup> ............ 1200.12.2b1 _.... for macOS 15 or later .......... 24.0.0_  
+• AMFIPass.kext<sup>_5_</sup> ............................... 1.4.1 _................ for macOS 12 or later ........... 21.0.0_  
+• AirportItlwm-OCLP.kext<sup>_5_</sup> ................ 2.3.0<sub>_patch_</sub> _........ for macOS 15 or later ........... 24.0.0_  
+• AirportItlwm-Sonoma14.4.kext<sup>_2_</sup> ..... 2.3.0<sub>_stable_</sub> _........ for macOS 14.4 or later ....... 23.4.0 .... 23.9.9_  
+• AirportItlwm-Sonoma14.0.kext<sup>_2_</sup> ..... 2.3.0<sub>_stable_</sub> _........ for macOS 14.3 or earlier .... 23.0.0 .... 23.3.9_  
+• AirportItlwm-Ventura.kext<sup>_2_</sup> ............. 2.3.0<sub>_stable_</sub> _....... for macOS 13 only ............... 22.0.0 .... 22.9.9_  
+• AirportItlwm-Monterey.kext<sup>_2_</sup> .......... 2.3.0<sub>_stable_</sub> _....... for macOS 12 only ................ 21.0.0 .... 21.9.9_  
+• AirportItlwm-BigSur.kext<sup>_2_</sup> ............... 2.3.0<sub>_stable_</sub> _....... for macOS 11 only ................ 20.0.0 .... 20.9.9_  
+
+
+## What works  
 • Audio  
 • Battery Status  
-• Bluetooth (1)  
+• Bluetooth<sup>_1_</sup>  
+• Brightness control   
 • Camera  
-• Graphics Resolution: _**1280x800 (HiDPI)** and 2560x1600 (native)_  
+• Graphics Acceleration  
+• Graphics Resolution : _default **1280x800 (HiDPI)** and 2560x1600 (native)_  
 • Keyboard  
+• Power Management  
 • Sleep / Wake  
 • TouchPad  
 • USB and USB Mapping  
-• internal  Wi-Fi (Intel AC7625) (2)  
-• external LAN (Realtek RTL8156B): _Cable Matters **USB-C to 2.5GbE Adapter** with PD  (Plug&Play, Driver-Free)_  
+• Volume control  
+• internal Wi-Fi AC (Intel 7265D2W)<sup>_2_</sup>  
+• external LAN (Realtek RTL8156B) : _Cable Matters **USB-C to 2.5GbE Adapter** with PD  (Plug&Play, Driver-Free)_  
 
-## What doesn't work
-• Brightness control (3)  
+
+## What doesn't work  
 • Fingerprint Sensor  
-• Graphics Acceleration  
-• Power Management  
 • TouchScreen  
+• HDMI video/audio output: No longer works<sup>_6_</sup> (use an _**USB-C to HDMI Adapter/Cable**_)  
 
-## Enable HiDPI mode
-You can enable HiDPI mode which adds _**1280x800**_ to the list of available display resolution options.  
-Enter the following command in terminal post-installation, then reboot:  
-_sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true_ 
+
+## How to build this dual boot Hackintosh from scratch:  
+_**⚠️ Disclaimer:  Back up your data first! Installing GPD firmware will always erase the entire 512GB drive!**_  
+
+_1. The latest [_GPD P2Max Windows10 Home v1909 firmware_](https://gpd.hk/gpdp2maxfirmwaredriverbios)<sup>7</sup> restores the factory Out-Of-Box-Experience:_  
+ <img src="images/partition.png" width="600"/>  
+
+_2. Delete partitions GPT(128MB), D:(365GB NTFS) and Recovery(12GB NTFS) with IM-Magic Partition Resizer._  
+ <img src="images/partition1.png" width="600"/>  
+_Move SYSTEM(100MB FAT32) and resize C:Windows(238GB NTFS) to the end of local Disk0._  
+ <img src="images/partition2.png" width="600"/>  
+
+_3. Insert the macOS Tahoe USB installer. Press 'Reload disks' in IM-Magic Partition Resizer.  
+Copy bootable EFI(200MB FAT32) of USB Disk1 to Unallocated(238GB) at the begin of local Disk0.  
+Format remaining Unallocated(238GB) into partition D:macOS(238GB FAT32) and reboot USB installer._  
+ <img src="images/partition3.png" width="600"/>  
+
+_4. Erase partition macOS(238GB FAT32) into volume macOS(238GB APFS) in Disk Utility.  
+Install macOS Tahoe and copy Hackintosh EFI folder to bootable EFI(200MB FAT32) of local Disk0 and reboot._  
+ <img src="images/partition4.png" width="600"/>  
+
+
+## Enabling native Intel WiFi/BT/Audio on macos Tahoe and Sequoia:  
+_**⚠️ Ensure that you're connected to the internet, as OCLP may need to download additional files.**_  
+
+• †Sonoma / †Monterey / †BigSur:  _No Root Patches are required._  
+
+• Sequoia:  
+_Install official [OCLP 2.4.1 (Dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) and apply Root Patches in Sequoia. Reboot._  
+<img src="images/rootpatch.png" height="200"/>  
+
+• Sequoia / Tahoe (dual boot)<sup>_5_</sup>:  
+_Revert Root Patches and uninstall official [OCLP 2.4.1 (Dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) in Sequoia. Reboot._  
+_Install experimental [OCLP 3.0.0 Nightly (kgp-macPro)](https://github.com/kgp-macPro/OCLP-lzhoang2801-amfipassbeta) in Sequoia and apply Root Patches. Reboot._  
+<img src="images/rootpatch1.png" height="300"/>  
+
+• Tahoe<sup>_5_</sup>:  
+_Install experimental [OCLP 3.0.0 Nightly (kgp-macPro)](https://github.com/kgp-macPro/OCLP-lzhoang2801-amfipassbeta) in Tahoe and apply Root Patches. Reboot._  
+<img src="images/rootpatch2.png" height="300"/>  
+
+
+## Notes
+• Fixing the iGPU hardware acceleration  
+ <img width="630" alt="DevProp" src="images/DevProp.png">  
+• Grabbing the built-in screen's EDID data for AAPL00<sup>_4_</sup>  
+... <img width="600" alt="EDID" src="images/EDID.png">  
+
+
+## Credits  
+Special thanks go to [**@muhamadahmadbzu**](https://github.com/muhamadahmadbzu), who kindly shared his solution for the iGPU hardware acceleration<sup>_4_</sup>  
+Thanks to [**@Azkali**](https://github.com/Azkali), whose initial **_[WIP] OpenCore EFI repository_** became the reference for this project  
+[OpenCore Auxiliary Tools (OCAT)](https://github.com/ic005k/OCAuxiliaryTools)  
+[Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#laptop-kaby-lake-amber-lake-y)  
+[**GPD** for creating the world's smallest Ultrabook **P2 Max 2019**](https://web.archive.org/web/20190926230736/https://www.gpd.hk/gpdp2max)  
+
 _________________________________________________________________________________________________
-(1) https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey-and-newer   
-(2) https://github.com/OpenIntelWireless/itlwm   
-(3) https://github.com/acidanthera/BrightnessKeys   
+_<sup>1</sup> https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey-and-newer_  
+_<sup>2</sup> https://github.com/OpenIntelWireless/itlwm/releases_  
+_<sup>3</sup> https://github.com/acidanthera/Lilu/blob/master/KnownPlugins.md_  
+_<sup>4</sup> https://osxlatitude.com/forums/topic/18095-how-do-i-grab-my-screens-edid-information/_  
+
+_**[SOLVED] Native Intel WiFi/Bluetooth/Audio on macOS Tahoe and Sequoia | Step By Step Video-Guide.**_  
+_<sup>5</sup> https://github.com/5T33Z0/OCLP4Hackintosh/blob/main/Enable_Features/AirportItllwm_Sequoia.md_  
+_<sup>5</sup> https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia_  
+_<sup>5</sup> https://www.youtube.com/watch?v=kNXrugg25u0_  
+
+_**[WIP] Have to unplug/replug HDMI cable to connect to external monitor.**_  
+_<sup>6</sup> https://discussions.apple.com/thread/255088951?sortBy=rank_  
+
+
+_**[ARCHIVED] GPD P2 MAX Drivers & OS installation Media**_  
+_<sup>7</sup> https://archive.org/details/gpd-p2-max-drivers-and-os_  
+
+
