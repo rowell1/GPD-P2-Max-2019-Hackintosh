@@ -18,7 +18,7 @@
                     <key>Comment</key>
                     <string>CPU Power Management patch</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-PM.aml</string>
                 </dict>
@@ -50,7 +50,7 @@
                     <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-PTSWAK.aml</string>
                 </dict>
@@ -106,7 +106,7 @@
                     <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-freqdata.aml</string>
                 </dict>
@@ -114,9 +114,25 @@
                     <key>Comment</key>
                     <string>NullEthernet</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-RMNE.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-BATSTA.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-LIDFIX.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -332,6 +348,8 @@
                 <false/>
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
+                <key>ClearTaskSwitchBit</key>
+                <false/>
                 <key>DevirtualiseMmio</key>
                 <false/>
                 <key>DisableSingleUser</key>
@@ -376,6 +394,11 @@
         <dict>
             <key>Add</key>
             <dict>
+                <key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>IOName</key>
+                    <string>pci14e4,43a0</string>
+                </dict>
                 <key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
@@ -384,6 +407,8 @@
                     <data>cKEAAA==</data>
                     <key>device_type</key>
                     <string>Audio device</string>
+                    <key>hda-gfx</key>
+                    <string>onboard-1</string>
                     <key>layout-id</key>
                     <data>ZAAAAA==</data>
                     <key>model</key>
@@ -418,7 +443,7 @@
                     <key>hda-gfx</key>
                     <string>onboard-1</string>
                     <key>model</key>
-                    <string>Intel UHD Graphics 617</string>
+                    <string>Intel UHD Graphics 615</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -435,11 +460,11 @@
             <array>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.7 | Patch Engine</string>
+                    <string>V1.7.2 | Patch Engine</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -453,11 +478,11 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMC Emulation</string>
+                    <string>V1.3.7 | SMC Emulation</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -471,119 +496,11 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>AppleALC.kext</string>
-                    <key>Comment</key>
-                    <string>V1.8.9 | Audio Controller</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AppleALC</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>IntelBTPatcher.kext</string>
-                    <key>Comment</key>
-                    <string>V2.4.0 | for macOS 12 Monterey and newer only</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/IntelBTPatcher</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>IntelBluetoothFirmware.kext</string>
-                    <key>Comment</key>
-                    <string>V2.4.0 | Intel Bluetooth firmware uploader</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/IntelBluetoothFirmware</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>IntelBluetoothInjector.kext</string>
-                    <key>Comment</key>
-                    <string>V2.4.0 | for macOS 11 BigSur only</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string>20.99.99</string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>BlueToolFixup.kext</string>
-                    <key>Comment</key>
-                    <string>V2.6.8 | for macOS 12 Monterey and newer only</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BlueToolFixup</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>SMCProcessor.kext</string>
-                    <key>Comment</key>
-                    <string>V1.3.2</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCProcessor</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>SMCBatteryManager.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2</string>
+                    <string>V1.3.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -597,11 +514,47 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>SMCProcessor.kext</string>
+                    <key>Comment</key>
+                    <string>V1.3.7</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCProcessor</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>SMCSuperIO.kext</string>
+                    <key>Comment</key>
+                    <string>V1.3.7</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCSuperIO</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.6 | Integrated GPU</string>
+                    <string>V1.7.0 | Integrated GPU</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -615,15 +568,15 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>CPUFriend.kext</string>
+                    <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.2.7 | Processor Power Management</string>
+                    <string>V1.9.7 | Audio Controller</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/CPUFriend</string>
+                    <string>Contents/MacOS/AppleALC</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -633,15 +586,15 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>NVMeFix.kext</string>
+                    <string>RestrictEvents.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.1 | Storage Power Management</string>
+                    <string>V1.1.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NVMeFix</string>
+                    <string>Contents/MacOS/RestrictEvents</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -651,61 +604,7 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>USBPorts.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0 | USB Port Mapping</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>NullEthernet.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.6</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NullEthernet</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>FeatureUnlock.kext</string>
-                    <key>Comment</key>
-                    <string>V1.1.5 | A Lilu plugin that unlocks the NightShift function for all Macs.</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/FeatureUnlock</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>BrightnessKeys.kext</string>
                     <key>Comment</key>
@@ -723,7 +622,241 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>ECEnabler.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.6</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/ECEnabler</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>FeatureUnlock.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.8 | A Lilu plugin that unlocks the NightShift function for all Macs.</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/FeatureUnlock</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>HibernationFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V1.5.4</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/HibernationFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IntelBluetoothFirmware.kext</string>
+                    <key>Comment</key>
+                    <string>V2.4.0 | Intel Bluetooth firmware uploader</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IntelBluetoothFirmware</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IntelBluetoothInjector.kext</string>
+                    <key>Comment</key>
+                    <string>V2.4.0 | for macOS 11 or earlier</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string>20.9.9</string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IntelBTPatcher.kext</string>
+                    <key>Comment</key>
+                    <string>V2.4.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IntelBTPatcher</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>BlueToolFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V2.7.2 | for macOS 12 or later</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BlueToolFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string> 21.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>NVMeFix.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.3 | Storage Power Management</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/NVMeFix</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>USBPorts.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0 | USB Port Mapping (Hackintool)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooGPIO</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
+                    <key>Comment</key>
+                    <string>V1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooI2CServices</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.6</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooInput</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VoodooI2C.kext</string>
+                    <key>Comment</key>
+                    <string>V2.9.1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooI2C</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>VoodooI2CGoodix.kext</string>
                     <key>Comment</key>
@@ -741,15 +874,15 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>VoodooI2C.kext</string>
+                    <string>VoodooI2CHID.kext</string>
                     <key>Comment</key>
-                    <string>V2.8</string>
+                    <string>V1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/VoodooI2C</string>
+                    <string>Contents/MacOS/VoodooI2CHID</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -759,15 +892,15 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>SystemProfilerMemoryFixup.kext</string>
+                    <string>VoodooPS2Controller.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.0 | Lilu plugin for showing the memory tab on MacBookAir and MacBookPro10,x platforms.</string>
+                    <string>V2.3.7</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SystemProfilerMemoryFixup</string>
+                    <string>Contents/MacOS/VoodooPS2Controller</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -777,15 +910,15 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>RTCMemoryFixup.kext</string>
+                    <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.7 | An open source kernel extension providing a way to emulate some offsets in CMOS (RTC) memory.</string>
+                    <string>V1.1.6 | Duplicate plugin of VoodooIC2</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/RTCMemoryFixup</string>
+                    <string>Contents/MacOS/VoodooInput</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -795,35 +928,125 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>AirportItlwm-BigSur.kext</string>
+                    <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 11 BigSur only</string>
+                    <string>V2.3.7</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AirportItlwm</string>
+                    <string>Contents/MacOS/VoodooPS2Keyboard</string>
                     <key>MaxKernel</key>
-                    <string>20.99.99</string>
+                    <string></string>
                     <key>MinKernel</key>
-                    <string>20.0.0</string>
+                    <string></string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>AirportItlwm-Monterey.kext</string>
+                    <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 12 Monterey only</string>
+                    <string>V2.3.7</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooPS2Mouse</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.7</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VoodooPS2Trackpad</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>itlwm.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 26 only (requires HeliPort App)</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/itlwm</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>25.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IOSkywalkFamily.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0 | for macOS 15 or later (requires OCLP Root Patch)</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AirportItlwm</string>
+                    <string>Contents/MacOS/IOSkywalkFamily</string>
                     <key>MaxKernel</key>
-                    <string>21.99.99</string>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IO80211FamilyLegacy.kext</string>
+                    <key>Comment</key>
+                    <string>V1200.12.2b1 | for macOS 15 or later (requires OCLP Root Patch)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IO80211FamilyLegacy</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AMFIPass.kext</string>
+                    <key>Comment</key>
+                    <string>V1.4.1 | for macOS 12 or later</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AMFIPass</string>
+                    <key>MaxKernel</key>
+                    <string></string>
                     <key>MinKernel</key>
                     <string>21.0.0</string>
                     <key>PlistPath</key>
@@ -831,17 +1054,71 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>AirportItlwm-Ventura.kext</string>
+                    <string>AirportItlwm-OCLP.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0 | for macOS 13 Ventura only</string>
+                    <string>V2.3.0 | for macOS 15 or later (requires OCLP Root Patch)</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AirportItlwm</string>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AirportItlwm-Sonoma14.4.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 14.4 or later</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>23.9.9</string>
+                    <key>MinKernel</key>
+                    <string>23.4.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AirportItlwm-Sonoma14.0.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 14.3 or earlier</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>23.3.9</string>
+                    <key>MinKernel</key>
+                    <string>23.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AirportItlwm-Ventura.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 13 only</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>22.9.9</string>
                     <key>MinKernel</key>
                     <string>22.0.0</string>
                     <key>PlistPath</key>
@@ -849,25 +1126,60 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
-                    <string>Any</string>
+                    <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>AirportItlwm-Sonoma.kext</string>
+                    <string>AirportItlwm-Monterey.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0 | for macOS 14 Sonoma only</string>
+                    <string>V2.3.0 | for macOS 12 only</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AirportItlwm</string>
                     <key>MaxKernel</key>
-                    <string>23.99.99</string>
+                    <string>21.9.9</string>
                     <key>MinKernel</key>
-                    <string>23.0.0</string>
+                    <string> 21.0.0</string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AirportItlwm-BigSur.kext</string>
+                    <key>Comment</key>
+                    <string>V2.3.0 | for macOS 11 only</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string>20.9.9</string>
+                    <key>MinKernel</key>
+                    <string>20.0.0</string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
             </array>
             <key>Block</key>
-            <array/>
+            <array>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>Comment</key>
+                    <string>Allow IOSkywalkFamily Downgrade</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Identifier</key>
+                    <string>com.apple.iokit.IOSkywalkFamily</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>24.0.0</string>
+                    <key>Strategy</key>
+                    <string>Exclude</string>
+                </dict>
+            </array>
             <key>Emulate</key>
             <dict>
                 <key>Cpuid1Data</key>
@@ -973,7 +1285,7 @@
                 <key>PickerMode</key>
                 <string>External</string>
                 <key>PickerVariant</key>
-                <string>Acidanthera\GoldenGate</string>
+                <string>rowell1\GoldenGate+</string>
                 <key>PollAppleHotKeys</key>
                 <false/>
                 <key>ShowPicker</key>
@@ -1083,7 +1395,7 @@
                     <key>FullNvramAccess</key>
                     <true/>
                     <key>Name</key>
-                    <string>UEFI Shell</string>
+                    <string>Open Shell</string>
                     <key>Path</key>
                     <string>OpenShell.efi</string>
                     <key>RealPath</key>
@@ -1111,14 +1423,22 @@
                 </dict>
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
+                    <key>ForceDisplayRotationInEFI</key>
+                    <integer>0</integer>
                     <key>SystemAudioVolume</key>
-                    <data>gA==</data>
+                    <data>Rg==</data>
+                    <key>bluetoothExternalDongleFailed</key>
+                    <data>AA==</data>
+                    <key>bluetoothInternalControllerInfo</key>
+                    <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string></string>
+                    <string>alcid=100 revpatch=sbvmm -wegnoegpu -btlfxboardid igfxonln=1 -amfipassbeta</string>
                     <key>csr-active-config</key>
-                    <data>AAAAAA==</data>
+                    <data>AwgAAA==</data>
                     <key>prev-lang:kbd</key>
                     <data></data>
+                    <key>run-efi-updater</key>
+                    <string>No</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -1135,7 +1455,10 @@
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <array>
                     <string>boot-args</string>
+                    <string>ForceDisplayRotationInEFI</string>
                     <string>csr-active-config</string>
+                    <string>bluetoothExternalDongleFailed</string>
+                    <string>bluetoothInternalControllerInfo</string>
                 </array>
             </dict>
             <key>LegacyOverwrite</key>
@@ -1191,7 +1514,7 @@
                 <key>SystemMemoryStatus</key>
                 <string>Auto</string>
                 <key>SystemProductName</key>
-                <string>MacBookAir8,2</string>
+                <string>MacBookPro16,2</string>
                 <key>SystemSerialNumber</key>
                 <string></string>
                 <key>SystemUUID</key>
@@ -1261,9 +1584,9 @@
                 <key>AudioDevice</key>
                 <string>PciRoot(0x0)/Pci(0x1f,0x3)</string>
                 <key>AudioOutMask</key>
-                <integer>1</integer>
+                <integer>-1</integer>
                 <key>AudioSupport</key>
-                <false/>
+                <true/>
                 <key>DisconnectHda</key>
                 <false/>
                 <key>MaximumGain</key>
@@ -1273,7 +1596,7 @@
                 <key>MinimumAudibleGain</key>
                 <integer>-55</integer>
                 <key>PlayChime</key>
-                <string>Auto</string>
+                <string>Enabled</string>
                 <key>ResetTrafficClass</key>
                 <false/>
                 <key>SetupDelay</key>
@@ -1317,7 +1640,7 @@
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
-                    <string>OpenLinuxBoot.efi</string>
+                    <string>OpenCanopy.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -1329,7 +1652,7 @@
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
-                    <string>OpenCanopy.efi</string>
+                    <string>AudioDxe.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -1503,6 +1826,8 @@
                 <false/>
             </dict>
             <key>ReservedMemory</key>
+            <array/>
+            <key>Unload</key>
             <array/>
         </dict>
     </dict>
