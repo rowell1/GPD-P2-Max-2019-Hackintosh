@@ -960,7 +960,7 @@
                     <key>Comment</key>
                     <string>V2.4.0 | for macOS 26 only (requires HeliPort App)</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/itlwm</string>
                     <key>MaxKernel</key>
@@ -978,7 +978,7 @@
                     <key>Comment</key>
                     <string>V2.3.0 | for macOS 26 only (requires OCLP Root Patch)</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AirportItlwm</string>
                     <key>MaxKernel</key>
