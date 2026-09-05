@@ -98,13 +98,13 @@ _**LATEST NEWS**
 • USB and USB Mapping  
 • Volume control  
 • internal Wi-Fi AC (Intel 7265D2W)<sup>_2_</sup>  
-• external LAN (Realtek RTL8156B) : _Cable Matters **USB-C to 2.5GbE Adapter** with PD  (Plug&Play, Driver-Free)_  
+• external LAN (Realtek RTL8156B) : _Cable Matters **USB-C to 2.5GbE Adapter** with PD_  
 
 
 ## What doesn't work  
 • Fingerprint Sensor  
 • TouchScreen  
-• HDMI video/audio output: No longer works<sup>_6_</sup> (use an _**USB-C to HDMI Adapter/Cable**_)  
+• HDMI video/audio output: No longer works<sup>_6_</sup> (use an _**USB-C to HDMI Cable/Adapter** with PD_)  
 
 
 ## How to build this dual boot Hackintosh from scratch:  
@@ -131,13 +131,13 @@ Install macOS Tahoe and copy Hackintosh EFI folder to bootable EFI(200MB FAT32) 
 ## Enabling native Intel WiFi/BT/Audio on macos Tahoe and Sequoia:  
 _**⚠️ Ensure that you're connected to the internet, as OCLP may need to download additional files.**_  
 
-• †Sonoma / †Monterey / †BigSur:  _No Root Patches are required._  
+• †Sonoma / †Monterey / †BigSur:  _No Root Patches required._  
 
 • Sequoia:  
 _Install official [OCLP 2.4.1 (Dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) and apply Root Patches in Sequoia. Reboot._  
 <img src="images/rootpatch.png" height="200"/>  
 
-• Sequoia / Tahoe (dual boot)<sup>_5_</sup>:  
+• Sequoia (for dual boot with Tahoe)<sup>_5_</sup>:  
 _Revert Root Patches and uninstall official [OCLP 2.4.1 (Dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) in Sequoia. Reboot._  
 _Install experimental [OCLP 3.0.0 Nightly (kgp-macPro)](https://github.com/kgp-macPro/OCLP-lzhoang2801-amfipassbeta) in Sequoia and apply Root Patches. Reboot._  
 <img src="images/rootpatch1.png" height="300"/>  
