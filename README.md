@@ -1,4 +1,4 @@
-[![EFI release](https://img.shields.io/badge/EFI-Sep_18,_2026-silver.svg)](https://github.com/rowell1/GPD-P2-Max-2019-Hackintosh/tree/OpenCore)
+[![EFI release](https://img.shields.io/badge/EFI-Oct_6,_2026-silver.svg)](https://github.com/rowell1/GPD-P2-Max-2019-Hackintosh/tree/OpenCore)
 [![OpenCore version](https://img.shields.io/badge/OC-1.0.7-silver.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![](https://img.shields.io/badge/†BigSur-11.7.11-deeppink.svg)](https://www.apple.com/macos)
 [![macOS version](https://img.shields.io/badge/†Monterey-12.7.6-violet.svg)](https://www.apple.com/macos)
@@ -8,7 +8,7 @@
 [![macOS version](https://img.shields.io/badge/Tahoe-26.6.2-cornflowerblue.svg)](https://www.apple.com/macos)  
 
 
-# GPD P2 Max 2019 Hackintosh _[Pre-Release]_
+# GPD P2 Max 2019 Hackintosh _[WIP]_
 
 This EFI folder for **8.9" GPD P2 Max 2019** (m3-8100Y, BIOS V0.29) supports up to **macOS 26.6.2 Tahoe**  
 
@@ -71,17 +71,17 @@ _**LATEST NEWS**
 • VoodooI2C.kext ............................... 2.9.1  
 • VoodooI2CGoodix.kext ................... 0.4.0  
 • VoodooI2CHID.kext ......................... 1  
-• itlwm-Tahoe-vhtclamp.kext<sup>_5_</sup> .......... 2.4.0<sub>_patch_</sub> _........ for macOS 26 or later .......... 25.0.0_  
+• itlwm-Tahoe-vhtclamp.kext<sup>_5_</sup> .......... 2.4.0<sub>_patch_</sub> _........ for macOS 26 or later ......... 25.0.0_  
 • IOSkywalkFamily.kext<sup>_5_</sup> ................... 1.0 _................... for macOS 15 or later .......... 24.0.0_  
 • IO80211FamilyLegacy.kext<sup>_5_</sup> ........... 1200.12.2b1 _.... for macOS 15 or later .......... 24.0.0_  
-• AMFIPass.kext<sup>_5_</sup> .............................. 1.4.1 _................ for macOS 12 or later ........... 21.0.0_  
-• AirportItlwm-Tahoe.kext<sup>_5_</sup> ............... 2.3.0<sub>_patch_</sub> _........ for macOS 15 or later ........... 24.0.0_  
-• AirportItlwm-Sequoia.kext<sup>_5_</sup> ............ 2.3.0<sub>_patch_</sub> _....... for macOS 15 or later ........... 24.0.0_  
+• AMFIPass.kext<sup>_5_</sup> .............................. 1.4.1 _................. for macOS 12 or later .......... 21.0.0_  
+• AirportItlwm-Tahoe.kext<sup>_5_</sup> ............... 2.3.0<sub>_patch_</sub> _........ for macOS 26 or later ......... 25.0.0_  
+• AirportItlwm-Sequoia.kext<sup>_5_</sup> ............ 2.3.0<sub>_patch_</sub> _....... for macOS 15 only ............... 24.0.0 .... 24.9.9_  
 • AirportItlwm-Sonoma14.4.kext<sup>_2_</sup> ..... 2.3.0<sub>_stable_</sub> _....... for macOS 14.4 or later ....... 23.4.0 .... 23.9.9_  
 • AirportItlwm-Sonoma14.0.kext<sup>_2_</sup> ..... 2.3.0<sub>_stable_</sub> _....... for macOS 14.3 or earlier .... 23.0.0 .... 23.3.9_  
-• AirportItlwm-Ventura.kext<sup>_2_</sup> ............. 2.3.0<sub>_stable_</sub> _....... for macOS 13 only ............... 22.0.0 .... 22.9.9_  
-• AirportItlwm-Monterey.kext<sup>_2_</sup> .......... 2.3.0<sub>_stable_</sub> _....... for macOS 12 only ................ 21.0.0 .... 21.9.9_  
-• AirportItlwm-BigSur.kext<sup>_2_</sup> ............... 2.3.0<sub>_stable_</sub> _....... for macOS 11 only ................ 20.0.0 .... 20.9.9_  
+• AirportItlwm-Ventura.kext<sup>_2_</sup> ............. 2.3.0<sub>_stable_</sub> _....... for macOS 13 only .............. 22.0.0 .... 22.9.9_  
+• AirportItlwm-Monterey.kext<sup>_2_</sup> .......... 2.3.0<sub>_stable_</sub> _....... for macOS 12 only ............... 21.0.0 .... 21.9.9_  
+• AirportItlwm-BigSur.kext<sup>_2_</sup> ............... 2.3.0<sub>_stable_</sub> _....... for macOS 11 only ............... 20.0.0 .... 20.9.9_  
 
 
 ## What works  
@@ -136,7 +136,7 @@ _1• **†Sonoma / †Monterey / †BigSur**:  No Root Patches required._
 
 _2• **Sequoia**:_  
 _Revert Root Patches and **uninstall** current official OpenCore Legacy Patcher in Sequoia. Reboot._  
-_Install official [OCLP 2.5.0 (dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) and re-apply Root Patches. Reboot and reset NVRAM._  
+_Install official [OCLP 2.5.1 (dortania)](https://github.com/dortania/Opencore-Legacy-Patcher) and re-apply Root Patches. Reboot and reset NVRAM._  
 <img src="images/rootpatch1.png" height="200"/>  
 
 _3• **Tahoe** (with the use of EFI/OC/config-airportitlwm.plist)<sup>_5_</sup>:_  
