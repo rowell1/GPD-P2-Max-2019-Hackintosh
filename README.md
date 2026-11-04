@@ -67,7 +67,7 @@ _**LATEST NEWS**
 • FeatureUnlock.kext<sup>_3_</sup> ....................... 1.1.8  
 • HibernationFixup.kext ..................... 1.5.4  
 • IntelBluetoothFirmware.kext<sup>_1_</sup> .......... 2.5.2<sub>_alpha_</sub> _....... [(lshbluesky)](https://github.com/lshbluesky/IntelBluetoothFirmware) ........................ 21.0.0_  
-• IntelBluetoothInjector.kext<sup>_1_</sup> ............. 2.5.2<sub>_alpha_</sub> _....... [(lshbluesky)](https://github.com/lshbluesky/IntelBluetoothFirmware) ........................................... 20.9.9_  
+~~• IntelBluetoothInjector.kext<sup>_1_</sup> ............. 2.5.2<sub>_alpha_</sub> _....... [(lshbluesky)](https://github.com/lshbluesky/IntelBluetoothFirmware) ........................................... 20.9.9_~~  
 • IntelBTPatcher.kext<sup>_1_</sup> ........................ 2.5.2<sub>_alpha_</sub> _....... [(lshbluesky)](https://github.com/lshbluesky/IntelBluetoothFirmware) ........................ 21.0.0_  
 • BlueToolFixup.kext<sup>_1_</sup> ......................... 2.7.2 _............... for macOS 12 or later ......... 21.0.0_  
 • NVMeFix.kext .................................. 1.1.3  
@@ -75,18 +75,17 @@ _**LATEST NEWS**
 • VoodooI2C.kext ............................... 2.9.1  
 • VoodooI2CHID.kext ......................... 1  
 • VoodooI2CGoodix-PR29.kext ......... 0.4.0<sub>_alpha_</sub> _....... [(gargamel778)](https://github.com/gargamel778/GPD-P2-Max-OpenCore-Tahoe/releases)_  
-• IOSkywalkFamily.kext<sup>_5_</sup> .................... 1.0 _................. for macOS 15 or later .......... 24.0.0_  
-• IO80211FamilyLegacy.kext<sup>_5_</sup> ............ 1200.12.2b1 _.. for macOS 15 or later .......... 24.0.0_  
+~~• IOSkywalkFamily.kext<sup>_5_</sup> .................... 1.0 _................. for macOS 15 or later .......... 24.0.0_~~  
+~~• IO80211FamilyLegacy.kext<sup>_5_</sup> ............ 1200.12.2b1 _.. for macOS 15 or later .......... 24.0.0_~~  
 • AMFIPass.kext<sup>_5_</sup> ............................... 1.4.1 _............... for macOS 12 or later .......... 21.0.0_  
-• itlwm-Tahoe.kext<sup>_5_</sup> ........................... 2.4.0<sub>_alpha_</sub> _....... [(laobamac)](https://github.com/laobamac/itlwm) .......................... 25.0.0_  
 • itlwm.kext<sup>_5_</sup> ...................................... 2.3.0<sub>_stable_</sub> _...... for macOS 15 or earlier .......................... 24.9.9_  
 • AirportItlwm-Tahoe.kext<sup>_5_</sup> ................ 2.4.0<sub>_alpha_</sub> _....... [(laobamac)](https://github.com/laobamac/itlwm) ......................... 25.0.0_  
 • AirportItlwm-Sequoia.kext<sup>_5_</sup> ............ 2.4.0<sub>_alpha_</sub> _....... [(laobamac)](https://github.com/laobamac/itlwm) ......................... 24.2.0 ....... 24.9.9_  
 • AirportItlwm-Sonoma.kext<sup>_2_</sup> ............ 2.3.0<sub>_stable_</sub> _...... for macOS 14.4 or later ...... 23.4.0 ....... 23.9.9_  
 ~~• AirportItlwm-Sonoma14.0.kext<sup>_2_</sup> ..... 2.3.0<sub>_stable_</sub> _...... for macOS 14.3 or earlier .... 23.0.0 ....... 23.3.9_~~  
-• AirportItlwm-Ventura.kext<sup>_2_</sup> ............. 2.3.0<sub>_stable_</sub> _...... for macOS 13 only .............. 22.0.0 ....... 22.9.9_  
-• AirportItlwm-Monterey.kext<sup>_2_</sup> .......... 2.3.0<sub>_stable_</sub> _...... for macOS 12 only .............. 21.0.0 ........ 21.9.9_  
-• AirportItlwm-BigSur.kext<sup>_2_</sup> ............... 2.3.0<sub>_stable_</sub> _...... for macOS 11 only .............. 20.0.0 ....... 20.9.9_  
+~~• AirportItlwm-Ventura.kext<sup>_2_</sup> ............. 2.3.0<sub>_stable_</sub> _...... for macOS 13 only .............. 22.0.0 ....... 22.9.9_~~  
+~~• AirportItlwm-Monterey.kext<sup>_2_</sup> .......... 2.3.0<sub>_stable_</sub> _...... for macOS 12 only .............. 21.0.0 ........ 21.9.9_~~  
+~~• AirportItlwm-BigSur.kext<sup>_2_</sup> ............... 2.3.0<sub>_stable_</sub> _...... for macOS 11 only .............. 20.0.0 ....... 20.9.9_~~  
 
 
 ## What works  
