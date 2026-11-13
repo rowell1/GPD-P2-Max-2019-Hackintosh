@@ -8,7 +8,7 @@
 [![macOS version](https://img.shields.io/badge/Tahoe-26.7.1-cornflowerblue.svg)](https://www.apple.com/macos)  
 
 
-# GPD P2 Max 2019 Hackintosh  _[Work In Progress]_
+# GPD P2 Max 2019 Hackintosh  _[Device Under Test]_
 
 This EFI folder for **8.9" GPD P2 Max 2019** (m3-8100Y, BIOS V0.29) supports up to **macOS 26.7.1 Tahoe**  
 
@@ -23,8 +23,7 @@ _**LATEST NEWS**
 
 
 <img src="images/Tahoe.png" width="395"/> <img src="images/Sequoia.png" width="395"/>  
-<img src="images/Sonoma.png" width="395"/> <img src="images/Ventura.png" width="395"/>  
-<img src="images/Monterey.png" width="395"/> <img src="images/Windows11.png" width="395"/>  
+<img src="images/Sonoma.png" width="395"/> <img src="images/Windows11.png" width="395"/>  
 <img src="images/P2M19.png" width="395"/>  <img src="images/BootPicker.png" width="395"/>  
 
 
@@ -135,7 +134,7 @@ Install macOS Tahoe and copy Hackintosh EFI folder to bootable EFI(200MB FAT32) 
 
 ## Native Intel WiFi/BT/Audio on macOS Tahoe & Sequoia  
 
-> The `laobamac/itlwm` fork works flawlessly on Tahoe with Intel AC7265 (MVM Gen1/iwm), but fails to detect any wireless networks on Sequoia.  
+> The `laobamac/itlwm` fork works flawlessly on Tahoe with Intel AC7265 (MVM Gen1/iwm), but does not detect any wireless networks on Sequoia.  
 
 _1• **Tahoe / ~~Sequoia~~ / †Sonoma / †Ventura / †Monterey / †BigSur**:  No more OCLP Root Patches required.<sup>_5_</sup>_  
 
@@ -239,7 +238,7 @@ _**[SOLVED] Native Intel WiFi/BT/Audio on macOS Tahoe & Sequoia | Step By Step V
 _<sup>1</sup> https://www.youtube.com/watch?v=k2NwPZygJxA  (IntelBluetoothFirmware)_  
 _<sup>1</sup> https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/505#issuecomment-4852052902_  
 _<sup>1</sup> [https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#...to make bluetooth-work-on-macos-monterey-and-newer](https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey-and-newer)_  
-_<sup>5</sup> https://github.com/5T33Z0/OCLP4Hackintosh/blob/main/Enable_Features/AirportItllwm_Sequoia.md_  
+_<sup>5</sup> https://github.com/5T33Z0/OCLP4Hackintosh/blob/main/docs/Guides/Enable_Features/WiFi/AirportItllwm_Sequoia.md_  
 _<sup>5</sup> https://www.youtube.com/watch?v=qdSCwCmlLa4  (AirportItlwm)_  
 _<sup>5</sup> https://www.youtube.com/watch?v=rd5gMbCwE5M  (SimpleHDA)_  
 
