@@ -237,8 +237,8 @@ _<sup>8</sup> https://github.com/5T33Z0/Thinkpad-T490-Hackintosh-OpenCore#config
 _**[SOLVED] Native Intel WiFi/BT/Audio on macOS Tahoe & Sequoia | Step By Step Video-Guide(s).**_  
 _<sup>1</sup> https://www.youtube.com/watch?v=k2NwPZygJxA  (IntelBluetoothFirmware)_  
 _<sup>1</sup> https://github.com/OpenIntelWireless/IntelBluetoothFirmware/issues/505#issuecomment-4852052902_  
-_<sup>1</sup> [https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#...to make bluetooth-work-on-macos-monterey-and-newer](https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey-and-newer)_  
-_<sup>5</sup> https://github.com/5T33Z0/OCLP4Hackintosh/blob/main/docs/Guides/Enable_Features/WiFi/AirportItllwm_Sequoia.md_  
+_<sup>1</sup> [https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#...make BT work on Monterey and newer](https://openintelwireless.github.io/IntelBluetoothFirmware/FAQ.html#what-additional-steps-should-i-do-to-make-bluetooth-work-on-macos-monterey-and-newer)_  
+_<sup>5</sup> [https://github.com/5T33Z0/OCLP4Hackintosh/.../Guides/Enable_Features/WiFi/AirportItllwm_Sequoia.md](https://github.com/5T33Z0/OCLP4Hackintosh/blob/main/docs/Guides/Enable_Features/WiFi/AirportItllwm_Sequoia.md)_  
 _<sup>5</sup> https://www.youtube.com/watch?v=qdSCwCmlLa4  (AirportItlwm)_  
 _<sup>5</sup> https://www.youtube.com/watch?v=rd5gMbCwE5M  (SimpleHDA)_  
 
